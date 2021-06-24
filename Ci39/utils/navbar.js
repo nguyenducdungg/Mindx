@@ -27,17 +27,17 @@ let navbarContent = `
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav2">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="https://www.instagram.com/khanhduy2906/" target="_blank">
+                        <a class="nav-link text-light" href="https://www.instagram.com/dung.56/" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="https://www.twitter.com/vukhanh.duy.921" target="_blank">
+                        <a class="nav-link text-light" href="https://twitter.com/DungRoman8" target="_blank">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="https://www.facebook.com/vukhanh.duy.921" target="_blank">
+                        <a class="nav-link text-light" href="https://www.facebook.com/DungRomann" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
