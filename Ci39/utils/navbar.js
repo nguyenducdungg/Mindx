@@ -1,6 +1,6 @@
 let navbarContent = `
 <a class="navbar-brand text-light" href="index.html" id="logo">
-                Mindx
+                Roman
             </a>
             <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav1">
                 <ul class="navbar-nav justify-content-between">
