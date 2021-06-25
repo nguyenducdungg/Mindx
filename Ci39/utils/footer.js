@@ -16,11 +16,11 @@ let contactContent = `
                     </div>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-phone-alt"></i>
-                        024 777 51 999
+                        0398 113 876
                     </div>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-envelope"></i>
-                        roman@gmail.com
+                        nguyenducdung853@gmail.com
                     </div>
                     <h1 class="text-light"
                         style="font-family: 'Poppins', sans-serif; letter-spacing: 5px; margin-top: 50px">
