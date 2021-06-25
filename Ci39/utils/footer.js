@@ -1,7 +1,7 @@
 let footerContent = `
 <div class="footer-content text-light d-flex justify-content-center align-items-center"
                 style="font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 5px;">
-                MINDX RESTAURANT<i class="far fa-copyright mx-3"></i> 2020
+                ROMAN RESTAURANT<i class="far fa-copyright mx-3"></i> 2021
             </div>
 `;
 
@@ -12,7 +12,7 @@ let contactContent = `
                     </h1>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-map-marker-alt"></i>
-                        6th floor, 22C Thanh Cong Str, Ba Dinh, Ha Noi
+                        6th floor, 212 Tran Duy Hung Str, Cau Giay, Ha Noi
                     </div>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-phone-alt"></i>
@@ -20,7 +20,7 @@ let contactContent = `
                     </div>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-envelope"></i>
-                        mindx@gmail.com
+                        roman@gmail.com
                     </div>
                     <h1 class="text-light"
                         style="font-family: 'Poppins', sans-serif; letter-spacing: 5px; margin-top: 50px">
@@ -37,23 +37,23 @@ let contactContent = `
                     </h1>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-map-marker-alt"></i>
-                        6th floor, 22C Thanh Cong Str, Ba Dinh, Ha Noi
+                        6th floor, 212 Tran Duy Hung Str, Cau Giay, Ha Noi
                     </div>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-map-marker-alt"></i>
-                        2nd floor, 29T1 Hoang Dao Thuy, Ha Noi
+                        2nd floor, 56 Hoang Dao Thuy, Ha Noi
                     </div>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-map-marker-alt"></i>
-                        6th floor, 107 Nguyen Phong Sac, Cau Giay, Ha Noi
+                        6th floor, 107 Duy Tan, Cau Giay, Ha Noi
                     </div>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-map-marker-alt"></i>
-                        5th floor, 71 Nguyen Chi Thanh, Ba Dinh, Ha Noi
+                        5th floor, 68 Le Trong Tan, Dong Da, Ha Noi
                     </div>
                     <div class="text-light" style="font-family : 'Montserrat';">
                         <i class="fas fa-map-marker-alt"></i>
-                        253 Dien Bien Phu, District 3, Ho Chi Minh City
+                        88 Dien Bien Phu, District 3, Ho Chi Minh City
                     </div>
                 </div>
                 <div class="contact-area-content2" style="flex-grow: 1;flex-basis: 0;">
