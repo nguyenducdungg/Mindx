@@ -75,7 +75,7 @@ let navbarContent = `
                     <input type="text" class="input-field" placeholder="Email" required id="loginForm-email">
                     <input type="password" class="input-field" placeholder="Password" required id="loginForm-password">
                     <div class="d-flex justify-content-around">
-                        <button type="button" class="button-submit" onclick="login()">Login</button>
+                        <button type="button" class="button-submit" onclick="login()" id="enterLogin" onclick="resetFormLogin">Login</button>
                         <button type="button" class="button-submit" onclick="closeLoginForm()">Close</button>
                     </div>
                 </form>
@@ -86,9 +86,9 @@ let navbarContent = `
                     <input type="text" class="input-field" placeholder="Email" required id="registerForm-email">
                     <input type="password" class="input-field" placeholder="Password" required id="registerForm-password">
                     <input type="text" class="input-field" placeholder="Display Name" required  id="registerForm-displayName">
-                    <div class="d-flex justify-content-around">
+                    <div class="d-flex justify-content-around" >
                         <button type="button" class="button-submit" onclick="register()">Register</button>
-                        <button type="button" class="button-submit" onclick="closeLoginForm()">Close</button>
+                        <button type="button" class="button-submit" onclick="closeLoginForm()" id="enterRegister">Close</button>
                     </div>
                 </form>
             </div>
@@ -103,8 +103,8 @@ document.getElementById("navbar").innerHTML = navbarContent;
 async function setLoginButton() {
     let loggedinId = JSON.parse(localStorage.getItem("userId"))
     if (loggedinId) {
-        await DB.collection("users").doc(loggedinId).get().then(function(doc) {
-            document.getElementById("loginBtn").innerHTML = "Sign out"     
+        await DB.collection("users").doc(loggedinId).get().then(function (doc) {
+            document.getElementById("loginBtn").innerHTML = "Sign out"
         })
     } else {
         document.getElementById("loginBtn").innerHTML = "Sign in"
@@ -239,9 +239,9 @@ function toLogin() {
 
 
 function toCheckoutPage() {
-    
+
     let currentOrder = JSON.parse(localStorage.getItem("currentOrder"))
-    if(currentOrder) {
+    if (currentOrder) {
         window.location.href = "checkout.html"
     }
 }
@@ -264,7 +264,10 @@ function validateDisplayName(displayName) {
     }
     return true
 }
-
+function alertDK() {
+    alert("Dang ki thanh cong");
+    document.getElementById("registerFormInput").reset();
+}
 async function register() {
     let email = document.getElementById("registerForm-email").value
     let password = document.getElementById("registerForm-password").value
@@ -305,11 +308,23 @@ async function register() {
             displayName: displayName,
             isAdmin: false
         })
+        toLogin();
+        alertDK();
+        // resetform();
         console.log("done")
     }
 }
 
-
+var input = document.getElementById("loginForm-password");
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("enterLogin").click();
+    }
+});
+function resetFormLogin() {
+    document.getElementById("loginFormInput").reset();
+}
 async function login() {
     let email = document.getElementById("loginForm-email").value
     let password = document.getElementById("loginForm-password").value
@@ -338,9 +353,9 @@ async function login() {
             querySnapshot.forEach(function (doc) {
                 if (doc.data().email === email) {
                     isEmailExist = true
-                    if ( doc.data().password === password ) {
+                    if (doc.data().password === password) {
                         let id = doc.id
-                        localStorage.setItem("userId",JSON.stringify(id))
+                        localStorage.setItem("userId", JSON.stringify(id))
                         console.log("logged in")
                         $('.login-form-container').hide();
                         setLoginButton()
@@ -348,16 +363,17 @@ async function login() {
                         document.getElementById("loginErrorAlert").style.display = "block";
                         document.getElementById("loginErrorAlert").innerHTML = "Wrong password"
                     }
-                    
+
                 }
             });
         });
-        if ( !isEmailExist ) {
+        if (!isEmailExist) {
             document.getElementById("loginErrorAlert").style.display = "block";
             document.getElementById("loginErrorAlert").innerHTML = "Email not registed yet"
         }
     }
-    location.reload();
+
+    // location.reload();
 
 }
 
@@ -373,7 +389,7 @@ async function displayCollapseCart() {
     let currentOrder = JSON.parse(localStorage.getItem("currentOrder"))
     let totalPrice = 0
     for (let key in currentOrder) {
-        await DB.collection("menu").doc(key).get().then(function(doc) {
+        await DB.collection("menu").doc(key).get().then(function (doc) {
             content += `
                 <div class="cart-content">
                     <div class="cart-item d-flex">

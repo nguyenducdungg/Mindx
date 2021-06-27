@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-
+    <!--
+<script>
+    function Refresh()
+    {
+        var t=setTimeout("location.reload(true)",300000);
+    }
+</script>
+</head>
+<body onload="Refresh()">
+-->
     <title>Admin</title>
 </head>
 
@@ -91,7 +100,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    
+
                     <form id="updateUserForm">
                         <div class="form-group">
                             <label for="name">Email</label>
@@ -105,8 +114,8 @@
                             <label for="imageURL">Display Name</label>
                             <input type="text" class="form-control" id="displayName" placeholder="Display Name">
                         </div>
-                        
-                        
+
+
                     </form>
                 </div>
                 <div class="modal-footer">
